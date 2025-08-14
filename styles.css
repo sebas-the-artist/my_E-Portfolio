@@ -9,6 +9,7 @@
 
 .container {
   padding: 50px 0;
+  width: 100%;
 }
 
 .row {
@@ -63,9 +64,70 @@ section {
 }
 
 .title--secondary {
-  color: plum;
   color: rgb(255, 176, 255);
 }
+
+.link__hover-effect {
+  position: relative;
+}
+.link__hover-effect::after {
+  content: "";
+  position: absolute;
+  bottom: -3px;
+  right: 0;
+  height: 3px;
+  width: 0;
+  background-color: #242424;
+  transition: all 300ms ease-in-out;
+}
+.link__hover-effect:hover::after {
+  left: 0;
+  width: 100%;
+}
+
+.link__hover-effect--purple {
+  position: relative;
+}
+.link__hover-effect--purple::after {
+  content: "";
+  position: absolute;
+  bottom: -3px;
+  right: 0;
+  height: 3px;
+  width: 0;
+  background-color: rgb(255, 176, 255);
+  transition: all 300ms ease-in-out;
+}
+.link__hover-effect--purple:hover::after {
+  left: 0;
+  width: 100%;
+}
+
+@keyframes scroll {
+  0% {
+    transform: translateY(6px);
+  }
+  100% {
+    transform: translateY(-6px);
+  }
+}
+@keyframes bounce {
+  0% {
+    transform: translateY(5px);
+  }
+  100% {
+    transform: translateY(-2px);
+  }
+}
+@keyframes pulse {
+  0% {
+    transform: scale(0.9);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
 /*
 
 LANDING PAGE
@@ -132,6 +194,13 @@ LANDING PAGE
   border: 4px double #242424;
   rotate: -360deg;
 }
+.fa-envelope {
+  transition: all 900ms ease-in-out;
+  animation: pulse 750ms infinite alternate-reverse ease;
+}
+.fa-envelope:hover {
+  animation: none;
+}
 
 .scroll {
   position: absolute;
@@ -163,15 +232,6 @@ LANDING PAGE
   color: rgb(169, 169, 169);
   border: 1px solid black;
   border-radius: 50%;
-}
-
-@keyframes scroll {
-  0% {
-    transform: translateY(6px);
-  }
-  100% {
-    transform: translateY(-6px);
-  }
 }
 
 /*
@@ -210,16 +270,29 @@ nav {
   color: 242424;
   font-weight: 700;
   color: black;
+  transition: all 300ms ease;
+}
+.nav__link--anchor:hover {
+  color: rgb(255, 176, 255);
+  text-shadow: -0.6px -0.6px 0 #000, 0.6px -0.6px 0 #000, -0.6px 0px 0 #000,
+    0.6px 0.6px 0 #000;
 }
 
 .invert {
+  color: black;
   font-size: 20px;
   transition: all 300ms ease;
   cursor: url("e-portfolio.assets/finga.gif"), pointer;
+  padding-top: 1px;
 }
 
 .invert:hover {
   rotate: 180deg;
+  transform: scale(1.3);
+}
+
+.invert:active {
+  transform: scale(0.7);
 }
 
 /*
@@ -301,6 +374,9 @@ PROJECTS
   font-size: 20px;
   margin-right: 16px;
 }
+.project__description--link:hover {
+  color: rgb(255, 176, 255);
+}
 
 .project__wrapper--bg {
   position: absolute;
@@ -311,4 +387,56 @@ PROJECTS
   background-color: #1c1d25;
   opacity: 0;
   transition: all 1000ms ease-in-out;
+}
+
+/*
+
+FOOTER
+
+*/
+
+footer {
+  background-color: #242424;
+  padding: 0 0 2% 0;
+}
+
+.footer__row {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.footer__logo {
+  filter: invert(3);
+  width: 30%;
+  padding: 0;
+  margin: 0;
+  transition: all 300ms ease;
+  animation: bounce 1000ms alternate-reverse infinite ease-in-out;
+}
+
+.footer__logo--fig {
+  display: flex;
+  justify-content: center;
+}
+
+.footer__social--list {
+  width: 100%;
+  max-width: 500px;
+  display: flex;
+  justify-content: space-between;
+
+  padding: 2% 0 4% 0;
+}
+
+.footer__social--link {
+  color: rgb(234, 234, 234);
+}
+.footer__social--link:hover {
+  color: rgb(255, 176, 255);
+}
+
+.copyright {
+  color: rgb(169, 169, 169);
 }
