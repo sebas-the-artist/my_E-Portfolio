@@ -36,6 +36,54 @@ button {
   cursor: pointer;
 }
 
+section {
+  background-color: rgb(250, 235, 255);
+  /*background-color: rgb(245, 245, 245);*/
+}
+
+input,
+textarea {
+  width: 100%;
+  background-color: #242424;
+  color: whitesmoke;
+  outline: none;
+  border: 3px solid whitesmoke;
+  border-top: none;
+  border-left: none;
+  border-right: none;
+  height: 40px;
+  transition: all 400ms ease;
+}
+textarea {
+  resize: vertical;
+  height: 100px;
+  margin-top: 8px;
+}
+label {
+  font-size: 14px;
+  font-weight: bold;
+}
+
+input:hover,
+textarea:hover {
+  border-color: rgb(250, 235, 255);
+}
+
+input:focus,
+textarea:focus {
+  border-color: rgb(255, 176, 255);
+}
+
+.color {
+  color: plum;
+  color: rgb(255, 176, 255);
+  font-weight: bold;
+}
+
+.outline {
+  text-shadow: -0.6px -0.6px 0 #000, 0.6px -0.6px 0 #000, -0.6px 0px 0 #000,
+    0.6px 0.6px 0 #000;
+}
 .click {
   transition: all 300ms ease;
 }
@@ -44,16 +92,6 @@ button {
 }
 .click:active {
   transform: scale(0.8);
-}
-
-section {
-  background-color: rgb(250, 235, 255);
-  /*background-color: rgb(245, 245, 245);*/
-}
-.color {
-  color: plum;
-  color: rgb(255, 176, 255);
-  font-weight: bold;
 }
 
 .title {
@@ -121,7 +159,7 @@ section {
 }
 @keyframes pulse {
   0% {
-    transform: scale(0.9);
+    transform: scale(0.95);
   }
   100% {
     transform: scale(1);
@@ -186,7 +224,7 @@ LANDING PAGE
 
   transition: all 800ms ease-in-out;
   z-index: 3;
-  cursor: url("e-portfolio.assets/finga.gif"), pointer;
+  cursor: url(e-portfolio.assets/finga.gif), pointer;
 }
 .mail__btn:hover {
   color: #242424;
@@ -297,7 +335,149 @@ nav {
 
 /*
 
-PROJECTS
+  MODAL
+
+*/
+
+.modal {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 90%;
+  max-width: 1100px;
+  max-width: 900px;
+  height: 700px;
+  height: 500px;
+  box-shadow: 0 20px 80px 0 rgb(0, 0, 0, 0.55);
+  border-radius: 20px;
+  overflow: hidden;
+  display: flex;
+}
+
+.modal__half {
+  width: 50%;
+  padding: 40px 72px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  position: relative;
+}
+.modal__about {
+  background-color: rgb(169, 169, 169);
+}
+
+.modal__title {
+  font-size: 26px;
+}
+
+.modal__sub-title {
+  margin: 12px 0 24px 0;
+  font-size: 14px;
+}
+
+.modal__para {
+  margin-bottom: 12px;
+  line-height: 1.25;
+}
+
+.modal__languages {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.modal__language {
+  width: 25%;
+  padding: 16px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  transition: all 300ms ease-in-out;
+}
+
+.language__name {
+  position: absolute;
+  bottom: -10px;
+  transform: scale(0);
+  transition: all 300ms ease-in-out;
+}
+.modal__language:hover .language__name {
+  transform: scale(1);
+}
+.modal__language:hover {
+  filter: brightness(80%);
+  transform: scale(0.9);
+}
+
+.modal__language--img {
+  width: 100%;
+}
+
+.modal__contact {
+  background-color: #242424;
+  color: whitesmoke;
+}
+
+.form__item {
+  margin-bottom: 20px;
+}
+
+.form__submit {
+  font-weight: bold;
+  width: 100%;
+  max-width: 240px;
+  padding: 12px 24px;
+  font-size: 20px;
+
+  border-radius: 5px;
+  color: rgb(255, 176, 255);
+  background-color: #242424;
+  border: 4px double rgb(255, 176, 255);
+  transition: all 800ms ease;
+}
+.form__submit:hover {
+  color: #242424;
+  background-color: rgb(255, 176, 255);
+  border: 4px double #242424;
+}
+
+.form__submit:active {
+  transform: scale(0.9);
+  border-radius: 12px;
+}
+
+.modal__overlay--loading {
+  background-color: blue;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 80px;
+  z-index: -1;
+}
+
+.fa-spinner {
+  animation: spinner 1200ms infinite linear;
+}
+
+@keyframes spinner {
+  0% {
+    transform: rotate(0);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+/*
+
+  PROJECTS
 
 */
 
