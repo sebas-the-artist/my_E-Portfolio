@@ -6,7 +6,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sebastian Martinez</title>
     <link rel="stylesheet" href="styles.css">
+    <script src="index.js"></script>
     <script src="https://kit.fontawesome.com/d7b20240a7.js" crossorigin="anonymous"></script>
+
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
+    </script>
+    <script type="text/javascript">
+        (function () {
+            emailjs.init({
+                publicKey: "UMoRBjsiN_M9CU_7m",
+            });
+        })();
+    </script>
 </head>
 
 <body>
@@ -132,7 +143,7 @@
                     I'm currently open to oppurtunities
                 </h3>
 
-                <form action="" id="contact__form">
+                <form id="contact__form" onsubmit="contact()">
 
                     <div class="form__item">
                         <label for="" class="form__item--label">Name</label>
@@ -158,9 +169,11 @@
                 <div class="modal__overlay modal__overlay--loading">
                     <i class="fa-solid fa-spinner"></i>
                 </div>
-
+                <div class="modal__overlay modal__overlay--success">
+                    Thanks for the messageZ! Looking forward to speaking to you soon
+                </div>
             </div>
-
+            <i class="fa-solid fa-xmark modal__exit click"></i>
         </div>
 
     </section>
