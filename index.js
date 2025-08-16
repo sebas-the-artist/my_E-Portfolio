@@ -16,10 +16,12 @@ function contact(event) {
         'template_p3io1ga',
         event.target,
         'UMoRBjsiN_M9CU_7m'
-    ).then(() => {
+    )
+    .then(() => {
     loading.classList.remove('modal__overlay--visible');
     success.classList += ' modal__overlay--visible'
-    }).catch(() => {
+    })
+    .catch(() => {
         loading.classList.remove('modal__overlay--visible');
         alert(
         "The email service is temporarily unavailable, Please contact me directly manijustworkhere@gmail.com"
@@ -35,7 +37,13 @@ function contact(event) {
 */
 
 
+let isModalOpen = false
 function toggleModal() {
+    if (isModalOpen) {
+        isModalOpen = false
+        return document.body.classList.remove("modal--open");
+    }
     //toggle modal
+    isModalOpen = true;
     document.body.classList += " modal--open";
 }
