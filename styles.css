@@ -39,6 +39,7 @@ button {
 section {
   background-color: rgb(250, 235, 255);
   /*background-color: rgb(245, 245, 245);*/
+  transition: all 250ms ease-in-out;
 }
 
 input,
@@ -79,7 +80,9 @@ textarea:focus {
   color: rgb(255, 176, 255);
   font-weight: bold;
 }
-
+.line {
+  color: #242424;
+}
 .outline {
   text-shadow: -0.6px -0.6px 0 #000, 0.6px -0.6px 0 #000, -0.6px 0px 0 #000,
     0.6px 0.6px 0 #000;
@@ -206,6 +209,10 @@ LANDING PAGE
   line-height: 1.5;
   max-width: 450px;
 }
+.k:hover {
+  text-shadow: -0.6px -0.6px 0 #000, 0.6px -0.6px 0 #000, -0.6px 0px 0 #000,
+    0.6px 0.6px 0 #000;
+}
 
 .social__list {
   margin-top: 16px;
@@ -261,7 +268,7 @@ LANDING PAGE
   bottom: 20px;
   left: 50%;
   transform: translateX(-50%);
-  background-color: rgb(250, 235, 255);
+  background-color: transparent;
   border-radius: 24px;
 }
 .scroll__icon {
@@ -534,6 +541,53 @@ nav {
   color: whitesmoke;
   font-size: 36px;
   z-index: 100;
+  transition: all 200ms;
+}
+.modal__exit:hover {
+  cursor: url("e-portfolio.assets/oth666.cur"), pointer;
+}
+
+.dark-theme .title,
+.dark-theme .section__title,
+.dark-theme .section__sub-title,
+.dark-theme .invert,
+.dark-theme .header__para {
+  color: whitesmoke;
+}
+.dark-theme section {
+  background-color: #696969;
+}
+.dark-theme footer {
+  background-color: #696969;
+}
+.dark-theme .nav__logo {
+  filter: invert(2);
+}
+.dark-theme .footer__logo {
+  filter: invert(0);
+}
+.dark-theme .title--secondary {
+  color: rgb(255, 176, 255);
+}
+.dark-theme .social__link {
+  color: #696969;
+}
+.dark-theme .copyright {
+  color: #242424;
+}
+.dark-theme .nav__link--anchor {
+  color: rgb(255, 176, 255);
+}
+.dark-theme .nav__link--anchor:hover {
+  color: rgb(169, 169, 169);
+}
+.dark-theme .footer__social--link {
+  color: rgb(255, 176, 255);
+}
+.dark-theme .footer__social--link:hover {
+  text-shadow: -0.6px -0.6px 0 #000, 0.6px -0.6px 0 #000, -0.6px 0px 0 #000,
+    0.6px 0.6px 0 #000;
+  color: white;
 }
 
 /*
@@ -543,7 +597,6 @@ nav {
 */
 
 #projects {
-  background-color: rgb(250, 235, 255);
 }
 .project {
   display: flex;

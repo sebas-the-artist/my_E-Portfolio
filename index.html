@@ -41,15 +41,15 @@
                     link__hover-effect--black
                     ">Projects</a>
                 </li>
-                <li class="nav__link">
+                <li class="nav__link" onclick="toggleModal()">
                     <a href="#" class="
                     nav__link--anchor
                     link__hover-effect
                     link__hover-effect--black
                     ">Contact</a>
                 </li>
-                <li class="nav__link">
-                    <a href="" class="
+                <li class="nav__link invert" onclick="toggleContrast()">
+                    <a href="#" class="
                     link__hover-effectX
                     link__hover-effect--black
                     "><i class="fa-solid fa-circle-half-stroke click invert"></i></a>
@@ -64,7 +64,7 @@
             <p class="header__para">I'm a <span class="color">Frontend Software Engineer</span> with a strong passion
                 for overcoming the creative challenges that come with building Web-Applications.
                 <br>
-                Heres a bit more <span class="color">about me</span>
+                Heres a bit more <span class="color link__hover-effect k" onclick="toggleModal()">about me</span>
             </p>
             <div class="social__list">
                 <a href="" class="social__link click">
@@ -134,7 +134,7 @@
             </div>
 
             <div class="modal__half modal__contact">
-                <i class="fa-solid fa-xmark modal__exit click"></i>
+                <i class="fa-solid fa-xmark modal__exit click" onclick="toggleModal()"></i>
 
                 <h3 class="modal__title modal__title--contact">
                     Let's have a chat!

@@ -2,6 +2,18 @@
 //service_ka386sl
 //xSSG4mKNPS7AGUiDA      UMoRBjsiN_M9CU_7m
 
+let contrastToggle
+
+function toggleContrast() {
+    contrastToggle = !contrastToggle;
+    if (contrastToggle) {
+        document.body.classList += "dark-theme"
+    }
+    else (
+        document.body.classList.remove("dark-theme")
+    )
+}
+
 
 function contact(event) {
     event.preventDefault()
