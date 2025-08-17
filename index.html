@@ -21,7 +21,7 @@
 </head>
 
 <body>
-    <section id="landing-page">
+    <section id="landing-page" onmousemove="moveBackground(event)">
         <nav>
             <figure>
                 <img class="nav__logo" src="e-portfolio.assets/sm-triangle.png" alt="personal logo">
@@ -176,9 +176,22 @@
             </div>
         </div>
 
+
+        <img src="e-portfolio.assets/triangle.svg" class="shape shape-1">
+        <img src="e-portfolio.assets/semi circle.svg" class="shape shape-2">
+        <img src="e-portfolio.assets/circle.svg" class="shape shape-3">
+        <img src="e-portfolio.assets/semi circle.svg" class="shape shape-4">
+        <img src="e-portfolio.assets/squiggly.svg" class="shape shape-5">
+        <img src="e-portfolio.assets/squiggly.svg" class="shape shape-6">
+        <img src="e-portfolio.assets/circle.svg" class="shape shape-7">
+        <img src="e-portfolio.assets/triangle.svg" class="shape shape-8">
+        <img src="e-portfolio.assets/semi circle.svg" class="shape shape-1700">
+        <img src="e-portfolio.assets/circle.svg" class="shape shape-0">
+
+
     </section>
 
-    <section id="projects">
+    <section id="projects" onmousemove="moveBackground(event)">
 
         <div class="container">
             <div class="row">
@@ -271,7 +284,7 @@
 
     </section>
 
-    <footer>
+    <footer onmousemove="moveBackground(event)">
         <div class="container">
             <div class="row footer__row">
 
@@ -294,7 +307,7 @@
                 footer__social--link
                 link__hover-effect--purple
                 click
-                ">
+                " onclick="toggleModal()">
                         Contact
                     </a>
 
