@@ -865,8 +865,11 @@ width = 80vw
 
 /*small phones || large phones && tablets*/
 @media (max-width: 768px) {
+  #landing__page {
+    height: 120vh;
+  }
   .title {
-    font-size: 80px;
+    font-size: 60px;
   }
   .header__para {
     font-size: 20px;
@@ -910,5 +913,8 @@ width = 80vw
   }
   .modal__half {
     padding: 35px;
+  }
+  .nav__logo {
+    width: 60px;
   }
 }
