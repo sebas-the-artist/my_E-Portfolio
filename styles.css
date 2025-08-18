@@ -7,6 +7,11 @@
   font-family: "Roboto", sans-serif;
 }
 
+html {
+  scroll-behavior: smooth;
+  transition: all 400ms ease;
+}
+
 .container {
   padding: 50px 0;
   width: 100%;
@@ -764,11 +769,11 @@ width = 80vw
 
 .shape-0 {
   top: 15vh;
-  left: 5vw;
+  left: 20vw;
 }
 .shape-1 {
   top: 15vh;
-  left: 45vw;
+  left: 49vw;
 }
 .shape-2 {
   top: 15vh;
@@ -776,11 +781,11 @@ width = 80vw
 }
 .shape-3 {
   top: 50vh;
-  left: 5vw;
+  left: 20vw;
 }
 .shape-4 {
   top: 50vh;
-  left: 45vw;
+  left: 49vw;
 }
 .shape-5 {
   top: 50vh;
@@ -788,11 +793,11 @@ width = 80vw
 }
 .shape-6 {
   top: 80vh;
-  left: 5vw;
+  left: 20vw;
 }
 .shape-7 {
   top: 80vh;
-  left: 45vw;
+  left: 49vw;
 }
 .shape-8 {
   top: 80vh;
@@ -839,8 +844,23 @@ width = 80vw
 .title,
 .title--secondary,
 .header,
-.header__para {
+.header__para,
+.section__title {
   z-index: 100;
+}
+
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: rgb(250, 235, 255);
+}
+::-webkit-scrollbar-thumb {
+  background: rgb(255, 176, 255);
+  border-radius: 12px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
 }
 
 /*small phones || large phones && tablets*/
@@ -875,5 +895,20 @@ width = 80vw
   }
   .nav__link:first-child {
     display: none;
+  }
+  .project__description--para {
+    display: none;
+  }
+  .project__description {
+    left: 0;
+    padding: 0;
+    width: 100%;
+    text-align: center;
+  }
+  .project__description--sub-title {
+    margin-bottom: 8px;
+  }
+  .modal__half {
+    padding: 35px;
   }
 }
