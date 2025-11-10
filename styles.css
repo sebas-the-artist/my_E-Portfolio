@@ -596,7 +596,8 @@ nav {
   filter: sepia(90%);
 }
 .dark-theme .tri {
-  filter: hue-rotate(160deg) contrast(80%);
+  /*filter: hue-rotate(160deg) contrast(80%);*/
+  filter: hue-rotate(50deg) sepia(90%);
 }
 .dark-theme ::-webkit-scrollbar-track {
   background: #696969;
