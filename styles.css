@@ -5,6 +5,7 @@
   padding: 0;
   box-sizing: border-box;
   font-family: "Roboto", sans-serif;
+  scroll-behavior: none;
 }
 
 html {
@@ -263,7 +264,7 @@ LANDING PAGE
   rotate: -360deg;
 }
 .fa-envelope {
-  transition: all 900ms ease-in-out;
+  transition: all 1600ms ease-in-out;
   animation: pulse 750ms infinite alternate-reverse ease;
 }
 .fa-envelope:hover {
@@ -552,6 +553,7 @@ nav {
 }
 .modal__exit:hover {
   cursor: url("e-portfolio.assets/oth666.cur"), pointer;
+  /*color: rgb(255, 176, 255);*/
 }
 
 .dark-theme .title,
@@ -591,7 +593,13 @@ nav {
   color: white;
 }
 .dark-theme .shape {
-  filter: sepia(80%);
+  filter: sepia(90%);
+}
+.dark-theme .tri {
+  filter: hue-rotate(160deg) contrast(80%);
+}
+.dark-theme ::-webkit-scrollbar-track {
+  background: #696969;
 }
 
 /*
