@@ -324,7 +324,12 @@ nav {
   width: 20%;
   filter: invert(0);
   padding-top: 4px;
+  z-index: 7;
 }
+/* .nav__logo:hover {
+  cursor: url("e-portfolio.assets/finga.gif"), pointer;
+  filter: sepia(90%) hue-rotate(265deg) brightness(550%);
+} */
 
 .nav__link--list {
   display: flex;
@@ -569,6 +574,10 @@ nav {
 .dark-theme .nav__logo {
   filter: invert(2);
 }
+.dark-theme .nav__logo:hover {
+  /*   filter: sepia(100%) hue-rotate(250deg) brightness(500%);*/
+  filter: sepia(100%) brightness(550%);
+}
 .dark-theme .footer__logo {
   filter: invert(2);
 }
@@ -592,6 +601,11 @@ nav {
     0.6px 0.6px 0 #000;
   color: white;
 }
+
+.dark-theme .project__wrapper {
+  border: 4px solid rgb(255, 176, 255);
+}
+
 .dark-theme .shape {
   filter: sepia(90%);
 }
@@ -631,6 +645,8 @@ nav {
 
 .project__wrapper {
   position: relative;
+  border: 4px solid rgb(255, 176, 255);
+  border: 2px solid black;
   border-radius: 24px;
   box-shadow: 0 10px 60px 0 rgb(0, 0, 0, 0.55);
   width: 80%;
@@ -720,12 +736,13 @@ footer {
   width: 30%;
   padding: 0;
   margin: 0;
-  transition: bounce 400ms ease, scale 400ms ease-in-out, filter 3000ms ease;
+  transition: bounce 300ms ease, scale 400ms ease-in-out;
   animation: bounce 1000ms alternate-reverse infinite ease-in-out;
 }
 .footer__logo:hover {
-  filter: sepia(90%) hue-rotate(255deg) brightness(500%);
+  /*filter: sepia(90%) hue-rotate(255deg) brightness(500%);*/
   scale: 1.2;
+  animation: bounce 400ms alternate-reverse infinite ease-in-out;
 }
 
 .footer__logo--fig {
@@ -876,6 +893,20 @@ width = 80vw
   background: #555;
 }
 
+@media (max-width: 800px) {
+  .project__description--para {
+    font-size: 75%;
+  }
+  .project__description {
+    left: 0;
+    width: 90%;
+    padding-left: 8px;
+  }
+  .project__description--title {
+    font-size: 24px;
+  }
+}
+
 /*small phones || large phones && tablets*/
 @media (max-width: 768px) {
   #landing__page {
@@ -901,6 +932,22 @@ width = 80vw
   }
 }
 
+@media (max-width: 600px) {
+  .project__description--para {
+    font-size: 70%;
+  }
+  .project__description {
+    left: 0;
+    width: 98%;
+    padding-left: 8px;
+  }
+  .project__description--title {
+    font-size: 18px;
+  }
+  .project__description--sub-title {
+    margin-top: 0px;
+  }
+}
 /*small phones*/
 @media (max-width: 480px) {
   .title {
