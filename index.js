@@ -103,3 +103,7 @@ function toggleModal() {
     isModalOpen = true;
     document.body.classList += " modal--open";
 }
+
+function popup() {
+    alert("hey uhh... i think you clicked the close button by accident")
+}
