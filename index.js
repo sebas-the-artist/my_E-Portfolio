@@ -2,10 +2,22 @@
 //service_ka386sl
 //xSSG4mKNPS7AGUiDA      UMoRBjsiN_M9CU_7m
 
+//import MyFile from './fes-assets/sebastian-martinez-resume.pdf'; // Local file in src
+
 let contrastToggle = false
 
 const scaleFactor = 1;
 const shapes = document.querySelectorAll(".shape");
+
+/* function PdfButton() {
+  return (
+    <a href={MyFile} target="_blank" rel="noopener noreferrer">
+      <button className="my-custom-button">
+        View PDF
+      </button>
+    </a>
+  );
+} */
 
 // Helper to get center of viewport
 function getViewportCenter() {
